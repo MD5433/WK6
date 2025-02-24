@@ -1,38 +1,17 @@
-import java.util.ArrayList;
-import java.util.Scanner;
-
+// Mariah Dungey 02/23/2025
 public class Main {
-    static Scanner userIn = new Scanner(System.in);
-    static ArrayList usersInfo = new ArrayList<>();
     public static void main(String[] args) {
-        System.out.println("Hello, World!");
-        enterInfo();
+        Person userInput = new Person("Mariah", 18, 5.5);
+        String userName = userInput.promptString("What is your name?");
+        System.out.println(userName);
+
+        int userAge = userInput.promptInt("How old are you? " + userName);
+        System.out.println("You are " + userAge + " years old.");
+
+        double userHeight = userInput.promptDouble("How tall are you in feet? e.g(0.0) " + userName);
+        System.out.println("You are " + userHeight + " feet tall.");
 
 
-    }
-
-    static void enterInfo(){
-
-        while (!userIn.equals("end")){
-            System.out.println("Enter your first and last name.");
-            String usName = userIn.nextLine();
-            System.out.println("Enter your email.");
-            String usEmail = userIn.nextLine();
-
-            System.out.println("What is your street address?");
-            String usAddress = userIn.nextLine();
-            System.out.println("What city do you live in?");
-            String usCity = userIn.nextLine();
-            System.out.println("What state do you live in?");
-            String usState = userIn.nextLine();
-            System.out.println("What is your zip code");
-            int usZip = userIn.nextInt();
-            System.out.println("What is your phone number?");
-            int usPhone = userIn.nextInt();
-           
-        }
-
-        userIn.close();
 
     }
 }
